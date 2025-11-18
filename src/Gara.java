@@ -4,7 +4,7 @@ public class Gara {
 
     static void main(String[] args) {
         int MIN_PART = 2;
-        int MAX_PART = 4;
+        int MAX_PART = 8;
         int MIN_LUNGH = 10;
         Scanner sc = new Scanner(System.in);
         int nPartecipanti;
