@@ -24,7 +24,7 @@ public class Atleta implements Runnable {
             double velocita = random.nextDouble() * 10;
             metri += velocita;
             System.out.printf("%s metri percorsi: %.2f\n", nome, metri);
-            if (metri >= Giudice.lunghezzaPercorso) {
+            if (metri >= giudice.lunghezzaPercorso) {
                 concluso = true;
                 giudice.registraArrivo(this);
                 break;

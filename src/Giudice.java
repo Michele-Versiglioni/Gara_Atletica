@@ -7,7 +7,7 @@ public class Giudice {
     public static double lunghezzaPercorso;
     private final List<Atleta> classifica = new ArrayList<>();
     private final int atletiTotali;
-
+    private int arrivati = 0;
     public Giudice(int numeroAtleti) {
         this.atletiTotali = numeroAtleti;
     }
@@ -17,8 +17,8 @@ public class Giudice {
     }
 
     public synchronized void registraArrivo(Atleta atleta) {
-        classifica.add(atleta);
-
+        classifica.add(arrivati, atleta);
+        arrivati++;
         if (vincitore == null) {
             vincitore = atleta;
         }
@@ -51,13 +51,17 @@ public class Giudice {
     public void stampaClassifica() {
         System.out.println("\nClassifica finale:");
         for (int i = 0; i < classifica.size(); i++) {
-            System.out.println((i + 1) + "° " + classifica.get(i).getNome());
+            String riga = (i + 1) + "° " + classifica.get(i).getNome();
+            if (i >= arrivati) {
+                riga = riga + " (ritirato - DNF)";
+            }
+            System.out.println(riga);
         }
     }
 
     public void verificaPodio() {
         System.out.println("\nPodio:");
-        for (int i = 0; i < classifica.size() && i < 3; i++) {
+        for (int i = 0; i < arrivati && i < 3; i++) {
             System.out.println((i + 1) + "° posto: " + classifica.get(i).getNome());
         }
     }
