@@ -6,6 +6,7 @@ public class Giudice {
     private Atleta vincitore = null;
     public static double lunghezzaPercorso;
     private final List<Atleta> classifica = new ArrayList<>();
+    private GestoreFile gestoreFile = new GestoreFile();
     private final int atletiTotali;
     private int arrivati = 0;
     public Giudice(int numeroAtleti) {
