@@ -7,9 +7,10 @@ public class Gara {
         int MAX_PART = 8;
         int MIN_LUNGH = 10;
         Scanner sc = new Scanner(System.in);
+        GestoreFile gestoreFile = new GestoreFile();
         int nPartecipanti;
         int lunghezzaPercorso;
-
+        gestoreFile.leggiClassificaPrecedente();
         System.out.println("Benvenuto alla gara atletica");
 
         // Scegli numero partecipanti

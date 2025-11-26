@@ -45,6 +45,7 @@ public class Giudice {
             System.out.println("Vincitore: " + vincitore.getNome());
         }
 
+        gestoreFile.scriviClassifica(classifica, arrivati);
         stampaClassifica();
         verificaPodio();
     }
