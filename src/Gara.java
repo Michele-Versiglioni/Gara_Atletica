@@ -9,8 +9,11 @@ public class Gara {
         Scanner sc = new Scanner(System.in);
         int nPartecipanti;
         int lunghezzaPercorso;
+        Giudice giudice= new Giudice();
+        giudice.mostraClassificaPrecedente();
         System.out.println("Benvenuto alla gara atletica");
-
+        giudice = new Giudice();
+        giudice.mostraClassificaPrecedente();
         // Scegli numero partecipanti
         do {
             System.out.print("Numero partecipanti: ");
@@ -20,8 +23,7 @@ public class Gara {
             }
         } while(nPartecipanti < MIN_PART || nPartecipanti > MAX_PART);
         sc.nextLine();
-        Giudice giudice= new Giudice(nPartecipanti);
-        giudice.mostraClassificaPrecedente();
+        giudice = new Giudice(nPartecipanti);
         // Scegli lunghezza percorso
         do {
             System.out.printf("Lunghezza del percorso (min %d metri): ", MIN_LUNGH);

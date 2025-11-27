@@ -7,11 +7,14 @@ public class Giudice {
     private GestoreFile gestoreFile = new GestoreFile();
     public static double lunghezzaPercorso;
     private final List<Atleta> classifica = new ArrayList<>();
-    private final int atletiTotali;
+    private  int atletiTotali;
     private int arrivati = 0;
 
     public Giudice(int numeroAtleti) {
         this.atletiTotali = numeroAtleti;
+    }
+    public Giudice(){
+        this.gestoreFile=gestoreFile;
     }
 
     public void mostraClassificaPrecedente() {
