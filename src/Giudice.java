@@ -4,16 +4,17 @@ import java.util.List;
 public class Giudice {
 
     private Atleta vincitore = null;
-    private GestoreFile gestoreFile;
+    private GestoreFile gestoreFile = new GestoreFile();
     public static double lunghezzaPercorso;
     private final List<Atleta> classifica = new ArrayList<>();
     private final int atletiTotali;
     private int arrivati = 0;
+
     public Giudice(int numeroAtleti) {
         this.atletiTotali = numeroAtleti;
-        this.gestoreFile= new gestoreFile();
     }
-    public void mostraClassificaPrecedente(){
+
+    public void mostraClassificaPrecedente() {
         gestoreFile.leggiClassificaPrecedente();
     }
 
@@ -70,8 +71,5 @@ public class Giudice {
         for (int i = 0; i < arrivati && i < 3; i++) {
             System.out.println((i + 1) + "° posto: " + classifica.get(i).getNome());
         }
-    }
-
-    private class gestoreFile extends GestoreFile {
     }
 }
