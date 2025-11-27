@@ -7,10 +7,8 @@ public class Gara {
         int MAX_PART = 8;
         int MIN_LUNGH = 10;
         Scanner sc = new Scanner(System.in);
-        GestoreFile gestoreFile = new GestoreFile();
         int nPartecipanti;
         int lunghezzaPercorso;
-        gestoreFile.leggiClassificaPrecedente();
         System.out.println("Benvenuto alla gara atletica");
 
         // Scegli numero partecipanti
@@ -23,6 +21,7 @@ public class Gara {
         } while(nPartecipanti < MIN_PART || nPartecipanti > MAX_PART);
         sc.nextLine();
         Giudice giudice= new Giudice(nPartecipanti);
+        giudice.mostraClassificaPrecedente();
         // Scegli lunghezza percorso
         do {
             System.out.printf("Lunghezza del percorso (min %d metri): ", MIN_LUNGH);
