@@ -12,8 +12,6 @@ public class Gara {
         Giudice giudice= new Giudice();
         giudice.mostraClassificaPrecedente();
         System.out.println("Benvenuto alla gara atletica");
-        giudice = new Giudice();
-        giudice.mostraClassificaPrecedente();
         // Scegli numero partecipanti
         do {
             System.out.print("Numero partecipanti: ");
