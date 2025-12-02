@@ -46,5 +46,7 @@ Il programma permette inoltre di visualizzare la classifica di gare precedenti, 
   
 ## Crediti
 Per svolgere questo progetto, in particolare la classe GestoreFile, ho preso spunto dal progetto per la gestione della partita di pallavolo fatto dal professore Amendola Francesco:🔗https://github.com/amendola-scuola/Match.
+
+
 Il progetto scolastico Gara_Atletica è stato svolto da me (studente del 5 AINF) presso l'ITTS A. Volta di Perugia 
 
