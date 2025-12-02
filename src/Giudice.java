@@ -76,7 +76,7 @@ public class Giudice {
      * @param atleta l'atleta che ha concluso il percorso
      */
     public synchronized void registraArrivo(Atleta atleta) {
-        classifica.add(arrivati, atleta);
+        classifica.add(arrivati, atleta); //ogni atleta che arriva viene inserito nella classifica in ordine di arrivo
         arrivati++;
 
         if (vincitore == null) {
@@ -93,7 +93,7 @@ public class Giudice {
      * @param atleta l'atleta ritirato
      */
     public synchronized void registraRitiro(Atleta atleta) {
-        classifica.add(atleta);
+        classifica.add(atleta); //mette chi si ritira in fondo alla classifica
         System.out.println(atleta.getNome() + " si è ritirato.");
         verificaFineGara();
     }
